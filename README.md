@@ -1,28 +1,14 @@
 # 🛒 Grocery Store Operations Simulation (Arena) - Computer-Modelling
-# 📌 Project Overview
-This repository contains a discrete-event simulation model of a local grocery store, built using Rockwell Arena Simulation Software. The purpose of this project is to analyze customer flow, identify operational bottlenecks, and evaluate potential business improvements through "What-If" scenario testing.
 
-# 🎯 Objectives
-Model Customer Behavior: Simulate realistic foot traffic routing through different departments (Fresh Produce, Butchery, or Both).
+## 📌 Project Overview
+This repository contains Phase 1 (Group Assignment 1) of a discrete-event simulation project built using **Rockwell Arena Simulation Software**. The goal of this phase was to establish a functional, baseline model of a local grocery store's daily operations to understand initial customer flow and system capacity.
 
-Identify Bottlenecks: Analyze resource utilization to find points of friction in the customer journey.
+## ⚙️ The Baseline Model
+The model simulates a 3-day operational period (12 hours/day) with a maximum store capacity of 12 customers at a time. Customers are routed probabilistically to different shopping paths: Fresh Produce Only, Butchery Only, or Both.
 
-Optimize Operations: Propose and simulate solutions to reduce waiting times and improve overall system throughput.
+**Key Features:**
+* **Customer Routing & Gatekeeping:** A "Hold" logic ensures no more than 12 customers enter the store at once.
+* **Balking Logic:** Customers check aisle queues and will skip shopping if lines are too long.
+* **Initial Findings:** The baseline model successfully tracked customer movement but revealed significant waiting times at the checkout counter, indicating a primary bottleneck.
 
-# ⚙️ The Simulation Model
-The baseline model simulates a 3-day operational period (12 hours/day) with a maximum store capacity of 12 customers at a time. Customers are probabilistically assigned to different shopping paths, each with its own service times and queuing logic.
-
-Key Baseline Findings:
-
-Average Time in System: ~43 minutes per customer.
-
-System Throughput: ~1,255 customers served over 3 days.
-
-Primary Bottleneck: The Checkout Cashier reached 92% utilization, causing significant queue accumulation and pushing average wait times to nearly 30 minutes.
-
-# 🧪 "What-If" Scenario Analysis
-To address the bottleneck at the checkout counter, two alternative scenarios were modeled and compared against the baseline:
-
-Scenario A (Increased Staffing): Adding a second cashier to the schedule to alleviate the checkout queue.
-
-Scenario B (Increased Capacity): Raising the maximum store capacity from 12 to 20 customers to observe the impact on internal aisle congestion (e.g., Fresh Produce and Butchery).
+*(Note: Refinements and "What-If" optimization scenarios are covered in the GA2 repository/file).*
